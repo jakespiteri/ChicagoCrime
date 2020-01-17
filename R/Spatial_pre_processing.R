@@ -139,13 +139,6 @@ add_density_attributes_to_data <- function(crime_data, crime_kde, population_kde
                                population_density = as.vector(population_kde$fhat))
   crimes_data_w_density_attributes <- joinLonLat(crime_data, crime_kde_tbl, function(z1, z2) z2$crime_density, outname="Crime Density", inc_lonlat = FALSE)
   crimes_data_w_density_attributes <- joinLonLat(crimes_data_w_density_attributes, population_kde_tbl, function(z1, z2) z2$population_density, outname="Population Density", inc_lonlat = FALSE)
-  crimes_data_w_density_attributes <- mutate(crimes_data_w_density_attributes,
-                                             `Ratio Density` = `Crime Density`/`Population Density`)
-  crimes_data_w_density_attributes <- mutate(crimes_data_w_density_attributes,
-                                             `Ratio Density` = replace(crimes_data_w_density_attributes$`Ratio Density`,
-                                                                       which(!is.finite(crimes_data_w_density_attributes$`Ratio Density`)),
-                                                                       0))
-
   crimes_data_w_density_attributes
 }
 
