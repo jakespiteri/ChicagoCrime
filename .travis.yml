@@ -1,6 +1,7 @@
 language: r
 dist: xenial
 cache: packages
+warnings_are_errors: false
 branches:
   only:
   - master
