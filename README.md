@@ -3,8 +3,11 @@ title: "Readme for chicagocrime package"
 output: html_document
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+
+## Installation
+This package can be installed using devtools and the command
+```{r}
+devtools::install_github("https://github.com/jakespiteri/chicagocrime")
 ```
 
 ## Introduction
