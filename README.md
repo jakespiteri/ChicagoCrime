@@ -35,7 +35,7 @@ There are also functions that modify and clean the data. These are
  - Format the data, by adding census, police station and population data
  
 ## Data
-To load the data, you can use the function `data`, and choose one of `all_crime`, `sub_all_crime`, `census`, `police_stations` or `chicago_population`. The data frame `all_crime` is very large, with 6,336,525 rows and 14 columns. Most work is performed on `sub_all_crime`, a randomly shuffled subset of `all_crime`, with 50,000 rows and 14 columns. For this readme, we will use the subsetted data.
+To load the data, you can use the function `data`, and choose one of `all_crime`, `sub_all_crime`, `census`, `police_stations`, `block_boundaries` or `block_populations`. The data frame `all_crime` is very large, with 6,336,525 rows and 14 columns. Most work is performed on `sub_all_crime`, a randomly shuffled subset of `all_crime`, with 50,000 rows and 14 columns. For this readme, we will use the subsetted data.
 
 First, we load the package, load in the data, and clean and format it.
 ```{r, cache=TRUE}
@@ -114,14 +114,14 @@ plot(glmpath_fit)
 
 So the primary crime types that are most important are *narcotics*, *prostitution*, *criminal trespassing* and *weapons violation*. Some of the crime types aren't as important to predicting arrests, but overall it is an important predictor to include. Now we can look at other possible covariates.
 ```{r}
-X = model.matrix(~Domestic + `Population Density` + `Crime Density` + `HARDSHIP INDEX` + Hour + dist_from_station, data = training_set)
+X = model.matrix(~Domestic + `Population Density` + `Crime Density` + `HARDSHIP INDEX` + Hour + Year + dist_from_station + Longitude + Latitude, data = training_set)
 glmpath_fit = glmpath(y=y,x=X)
 par(mar=c(5,4,4,16.6))
 plot(glmpath_fit)
 ```
-So all of these covariates are important, with maybe the exception of *population density*. Now we can fit a model with these covariates.
+So all of these covariates are important, with the exception of *longitude* and *latitude*. Now we can fit a model with these covariates.
 ```{r}
-final_fit = lr(Arrest~Domestic + `Primary Type` + `Crime Density` + `HARDSHIP INDEX` + Hour + dist_from_station, data = training_set)
+final_fit = lr(Arrest~Domestic + `Primary Type` + `Crime Density` + `Population Density` + Year + `HARDSHIP INDEX` + Hour + dist_from_station, data = training_set)
 ```
 And find the training error
 ```{r}
