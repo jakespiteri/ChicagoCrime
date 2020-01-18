@@ -60,6 +60,8 @@ process_geom_string <- function(x, long = TRUE){
     str_remove('^.{16}') %>%
     str_remove('.{3}$') %>%
     str_remove_all(',') %>%
+    str_remove_all('\\)') %>%
+    str_remove_all('\\(') %>%
     str_split(' ') %>%
     unlist() %>%
     as.numeric() %>%

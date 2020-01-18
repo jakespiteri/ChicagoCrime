@@ -31,7 +31,7 @@ test_that("predict from lr + metrics",{
   ppreds = predict(lrfit, type="preds")
   pvals = predict(lrfit, type="vals")
 
-  c = cv.lr(lrfit, metric="all", leave_out = nrow(sub_all_crime)/3, seed=2, verbose=FALSE)
+  c = cv.lr(lrfit, metric="all", leave_out = nrow(sub_all_crime)/3, seed=5, verbose=FALSE)
   r = roc.lr(lrfit)
 
   expect_true(all(c(

@@ -59,22 +59,6 @@
 "police_stations"
 
 
-#' Chicago Population data
-#'
-#' A dataset containing the population totals of census blocks in the city of Chicago, measured by the longitude and latitude of
-#'
-#' @format A data frame with 46269 rows and 4 variables:
-#' \describe{
-#'   \item{GEOID10}{identification number of census block}
-#'   \item{lon}{longitude of the centre of the census block}
-#'   \item{lat}{latitude of the centre of the census block}
-#'   \item{total}{population total of the census block}
-#' }
-#' @source
-#' \url{https://data.cityofchicago.org/Facilities-Geographic-Boundaries/Population-by-2010-Census-Block/5yjb-v3mj}
-#' \url{https://data.cityofchicago.org/Facilities-Geographic-Boundaries/Boundaries-Census-Blocks-2010/mfzt-js4n}
-"chicago_population"
-
 #' Chicago Population data by Census block
 #'
 #' A dataset containing the population totals of census blocks in the city of Chicago
