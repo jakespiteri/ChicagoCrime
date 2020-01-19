@@ -3,6 +3,7 @@ title: "Readme for chicagocrime package"
 output: html_document
 ---
 
+[![Build Status](https://travis-ci.com/jakespiteri/chicagocrime.svg?branch=master)](https://travis-ci.com/jakespiteri/chicagocrime)  [![codecov](https://codecov.io/gh/jakespiteri/chicagocrime/branch/master/graph/badge.svg)](https://codecov.io/gh/jakespiteri/chicagocrime)
 
 ## Installation
 This package can be installed using devtools and the command
