@@ -4,13 +4,8 @@
 \alias{create_spatial_attributes}
 \title{Create spatial attributes}
 \usage{
-create_spatial_attributes(
-  crime_data,
-  block_boundaries_data,
-  population_data,
-  h = 0.01,
-  grid.size = 100L
-)
+create_spatial_attributes(crime_data, block_boundaries_data, population_data,
+  h = 0.01, grid.size = 100L)
 }
 \arguments{
 \item{crime_data}{full crime dataset}
