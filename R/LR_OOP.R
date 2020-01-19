@@ -371,7 +371,7 @@ cv.lr <- function(lrfit, metric = "mse", leave_out = nrow(lrfit$data)/10, verbos
 #' }
 #' The ROC curve is plotted from the pairs \eqn{(FPR(j), TPR(j))}, and the AUC is calculated as the area under this curve, i.e.
 #' \deqn{
-#'  \text{AUC} = \int_{j=1}^J TPR(FPR(j))dj.
+#'  AUC = \int_{j=1}^J TPR(FPR(j))dj.
 #' }
 #' @return the AUC value, and a plot of the ROC curve if \code{plot=TRUE}
 #' @importFrom graphics abline grid points

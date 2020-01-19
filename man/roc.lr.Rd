@@ -39,6 +39,6 @@ where \eqn{t} is some threshold. See \code{\link{predict.lr}} for details. A dif
 }
 The ROC curve is plotted from the pairs \eqn{(FPR(j), TPR(j))}, and the AUC is calculated as the area under this curve, i.e.
 \deqn{
- \text{AUC} = \int_{j=1}^J TPR(FPR(j))dj.
+ AUC = \int_{j=1}^J TPR(FPR(j))dj.
 }
 }
