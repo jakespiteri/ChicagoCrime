@@ -4,13 +4,8 @@
 \alias{cv.lr}
 \title{Cross-Validation of Logistic Regression Model}
 \usage{
-cv.lr(
-  lrfit,
-  metric = "mse",
-  leave_out = nrow(lrfit$data)/10,
-  verbose = TRUE,
-  seed = 1
-)
+cv.lr(lrfit, metric = "mse", leave_out = nrow(lrfit$data)/10,
+  verbose = TRUE, seed = 1)
 }
 \arguments{
 \item{lrfit}{an object of class "\code{lr}", the output to \code{\link{lr}}}

@@ -4,7 +4,8 @@
 \alias{predict.lr}
 \title{Predict from a Logistic Regression model}
 \usage{
-\method{predict}{lr}(object, newdata = NULL, thresh = 0, type = "preds", ...)
+\method{predict}{lr}(object, newdata = NULL, thresh = 0, type = "preds",
+  ...)
 }
 \arguments{
 \item{object}{an object of class "\code{lr}", the output from \code{\link{lr}}}

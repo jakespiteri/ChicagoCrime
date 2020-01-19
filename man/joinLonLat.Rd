@@ -4,16 +4,8 @@
 \alias{joinLonLat}
 \title{Join by Longitude/Latitude}
 \usage{
-joinLonLat(
-  x,
-  y,
-  f = NULL,
-  lonname = "Longitude",
-  latname = "Latitude",
-  outname = "distance",
-  inc_lonlat = TRUE,
-  verbose = TRUE
-)
+joinLonLat(x, y, f = NULL, lonname = "Longitude", latname = "Latitude",
+  outname = "distance", inc_lonlat = TRUE, verbose = TRUE)
 }
 \arguments{
 \item{x}{data frame to be appended to; should be the larger of \code{x} and \code{y}}
